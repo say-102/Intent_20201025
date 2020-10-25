@@ -20,7 +20,8 @@ class EditDataActivity : AppCompatActivity() {
 
             setResult(Activity.RESULT_OK, resultIntent)
 
-            finish()h
+            finish()
+
 
         }
 
