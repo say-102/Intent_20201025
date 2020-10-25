@@ -20,5 +20,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        sendDataBtn.setOnClickListener {
+
+//            다른 화면 (마이세컨드엑티비티) 으로 이동
+//            가는길에 데이터 (입력한 내용)를 들고 이동.
+
+            val inputcontent = contentEdt.text.toString()
+
+            val myIntent = Intent(this, MySecondActivity::class.java)
+            myIntent.putExtra("content", inputcontent)
+            startActivity(myIntent)
+
+        }
+
     }
 }
