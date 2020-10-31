@@ -62,10 +62,26 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(myIntent)
 
+
+        callBtn.setOnClickListener {
             val inputPhoneNum = phoneEdt.text.toString()
             val myUri = Uri.parse("tel:${inputPhoneNum}")
             val myIntent = Intent(Intent.ACTION_CALL, myUri)
             startActivity(myIntent)
+        }
+
+
+        smsBtn.setOnClickListener {
+            val inputPhoneNum = phoneEdt.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms_body", "ㅇㅇㅇ")
+            startActivity(myIntent)
+//            문자에 미리 내용을 담아두고 싶다! => 화면을 넘어갈때, 보여줄 문구를 담아주자!
+//            => putExtra 활용 (안드로이드팀이 정해둔 데이터이름표 : "sms_body")
+
+        }
+
         }
 
     }
