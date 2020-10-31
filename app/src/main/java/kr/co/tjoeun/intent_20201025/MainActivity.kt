@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(Intent.ACTION_DIAL, myUri)
 
             startActivity(myIntent)
+
+            val inputPhoneNum = phoneEdt.text.toString()
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
         }
 
     }
