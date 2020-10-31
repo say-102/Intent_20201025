@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(Intent.ACTION_DIAL, myUri)
 
             startActivity(myIntent)
-
+        }
 
         callBtn.setOnClickListener {
             val inputPhoneNum = phoneEdt.text.toString()
@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
 //            => putExtra 활용 (안드로이드팀이 정해둔 데이터이름표 : "sms_body")
 
         }
+
 
         }
 
